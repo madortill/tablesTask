@@ -12,13 +12,11 @@ let odot = () => {
     document.querySelector(`.div-odot`).style.display = "block";  
     document.querySelector(`.div-body`).style.overflow = "hidden";
     document.querySelector(`.odot-logo`).style.display = "none";  
-    // document.querySelector(`.title`).innerHTML = "אודות";
     document.querySelector(`#back-button-odot`).addEventListener("click", () => {
         document.querySelector(`.${strLocation}`).style.display = "block";
         document.querySelector(`.div-odot`).style.display = "none";  
         document.querySelector(`.odot-logo`).style.display = "block";  
         document.querySelector(`.div-body`).style.overflow = "scroll";
-        // document.querySelector(`.title`).innerHTML = "כותרת";
     })
 }
     
@@ -45,7 +43,6 @@ let switchToPageDrop = () => {
 }
 
 let backText = () => {
-    // debugger;
     if (nText === arrOpeningText.length - 1) {
         document.querySelector(`#next-button`).setAttribute("src", "assets/media/next_button.svg");
         document.querySelector(`.next-button`).removeEventListener("click", switchToPageDrop);
