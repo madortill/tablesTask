@@ -200,13 +200,19 @@ body, html {
 /* sort to groups */
 .dropContainer{
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .drop {
-    background-color: teal;
-    width: 40vw;
-    height: 40vh;
+    background-color: #0b3b8c;
+    border-radius: 16px;
+    border: #4f77a9 solid;
+    width: 88vw;
+    height: 18vh;
     margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .dragContainer{
@@ -215,10 +221,20 @@ body, html {
 }
 
 .drag {
-    background-color: rgb(106, 180, 180);
-    width: 15vw;
+    background-image: url(assets/media/Artboard\ 167.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: fit-content;
     height: 5vh;
+    text-align: center;
     margin: 1em;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Assistant;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
 }
 
 .div-drop {
@@ -248,6 +264,7 @@ body, html {
     /* border: aliceblue solid; */
     position: absolute;
     bottom: -29vh;
+    background-color: #0000008a;
 }
 
 .animation {
@@ -260,4 +277,9 @@ body, html {
     40% {bottom: 8vh;}
     60% {bottom: 8vh;}
     100% {bottom: -29vh;}
+}
+
+.p-groups {
+    margin: 0;
+    margin-right: 1em;
 }
