@@ -16,7 +16,10 @@ const createItems = () => {
     let dropContainer = El("div", {cls: `dropContainer`});
     document.querySelector(`.sortToGroupsContainer`).append(dropContainer);
     for(let j = 0; j < ARR_GROUPS.length; j++){
-        let dropItem = El("div", {cls: `drop`, attributes: {"data-num": j + 1}}, ARR_GROUPS[j]);
+        let dropItem = El("div", {cls: `drop`, attributes: {"data-num": j + 1}},
+            El("p",{cls: `p-groups`},ARR_GROUPS[j],),    
+        );        
+        //  ARR_GROUPS[j]);
         document.querySelector(`.dropContainer`).append(dropItem);
     }
     // create drag
@@ -72,7 +75,7 @@ Description: */
 onDrop = () => {
     // debugger;
     if (drop.getAttribute("data-num") === drag.getAttribute("data-num")) {
-        drag.style.backgroundColor = "green";  
+        drag.style.cssText = "background-image: url(assets/media/green.svg);";  
         drag.setAttribute("draggable", "false");
         nDragRight++
         // debugger;
@@ -81,7 +84,7 @@ onDrop = () => {
             // finishPage();
         }
     } else {
-        drag.style.backgroundColor = "red";
+        drag.style.cssText = "background-image: url(assets/media/red.svg);";  
         mistake();
     }
 }
