@@ -39,7 +39,7 @@ let switchToPageDrop = () => {
     setDrag();
     setDrop();
     createItems();
-    shuffle(DATA.sortToGroups);
+    shuffle(DATA.sortToGroups.drag);
 }
 
 let backText = () => {
