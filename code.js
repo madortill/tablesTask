@@ -1,4 +1,10 @@
 let strLocation = "front-div";
+// טקסט הפתיחה 
+let nText = 0; // המיקום במערך
+let arrOpeningText = [`שלום אני קב"מית נאסא`,
+`אני מבינה שהקוד שחשבתי עליו פשוט מידי כי הצלחתם לפתור אותו`,
+`בואו נעשה הסכם <br> אם תעזרו לי לפתור 2 שאלות`,
+`אני אתן לכם בתמורה את המספר הראשון לארון`];
 
 window.addEventListener("load", () => {
     document.querySelector(".loader").classList.add("fade");
@@ -59,7 +65,7 @@ finishPage = () => {
     document.querySelector(`.div-drop`).style.display = "none";
     document.querySelector(`.div-button`).style.display = "none";
     strLocation = "front-div";
-    document.querySelector(`.p-bubble`).innerHTML = `כל הכבוד! <br> ועסקה זאת עסקה, הקוד הוא ${CODE}`;
+    document.querySelector(`.p-bubble`).innerHTML = `כל הכבוד! <br> ועסקה זאת עסקה! הקוד הוא ${CODE}`;
 }
 
 /*
